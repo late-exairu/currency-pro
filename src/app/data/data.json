@@ -1,0 +1,19 @@
+{
+  "mainMenu": [
+    {
+      "id": 1,
+      "title": "Currency Converter",
+      "url": "/"
+    },
+    {
+      "id": 2,
+      "title": "Features",
+      "url": "/features"
+    },
+    {
+      "id": 3,
+      "title": "Resources",
+      "url": "/resources"
+    }
+  ]
+}
