@@ -15,5 +15,156 @@
       "title": "Resources",
       "url": "/resources"
     }
+  ],
+  "footerMenu": [
+    [
+      {
+        "id": 1,
+        "title": "How It Works",
+        "url": "/how-it-works"
+      },
+      {
+        "id": 2,
+        "title": "Hire Employees",
+        "url": "/hire-employees"
+      },
+      {
+        "id": 3,
+        "title": "Hire Contractors",
+        "url": "/hire-contractors"
+      },
+      {
+        "id": 4,
+        "title": "Global Payroll",
+        "url": "/global-payroll"
+      },
+      {
+        "id": 5,
+        "title": "Integrations",
+        "url": "/integrations"
+      }
+    ],
+    [
+      {
+        "id": 6,
+        "title": "Company",
+        "url": "/company"
+      },
+      {
+        "id": 7,
+        "title": "About",
+        "url": "/about"
+      },
+      {
+        "id": 8,
+        "title": "Contact Us",
+        "url": "/contact-us"
+      },
+      {
+        "id": 9,
+        "title": "Countries",
+        "url": "/countries"
+      },
+      {
+        "id": 10,
+        "title": "Careers",
+        "url": "/careers"
+      }
+    ],
+    [
+      {
+        "id": 11,
+        "title": "Solutions",
+        "url": "/solutions"
+      },
+      {
+        "id": 12,
+        "title": "Compliances",
+        "url": "/compliances"
+      },
+      {
+        "id": 13,
+        "title": "Payments",
+        "url": "/payments"
+      },
+      {
+        "id": 14,
+        "title": "Taxes",
+        "url": "/taxes"
+      },
+      {
+        "id": 15,
+        "title": "Enterprises",
+        "url": "/enterprises"
+      }
+    ],
+    [
+      {
+        "id": 16,
+        "title": "Resources",
+        "url": "/resources"
+      },
+      {
+        "id": 17,
+        "title": "FAQ",
+        "url": "/faq"
+      },
+      {
+        "id": 18,
+        "title": "Blog",
+        "url": "/blog"
+      },
+      {
+        "id": 19,
+        "title": "Open API",
+        "url": "/open-api"
+      },
+      {
+        "id": 20,
+        "title": "Guide",
+        "url": "/guide"
+      }
+    ]
+  ],
+  "footerSocials": [
+    {
+      "id": 1,
+      "name": "Instagram",
+      "icon": "instagram",
+      "url": "https://www.instagram.com/"
+    },
+    {
+      "id": 2,
+      "name": "Facebook",
+      "icon": "facebook",
+      "url": "https://www.facebook.com/"
+    },
+    {
+      "id": 3,
+      "name": "LinkedIn",
+      "icon": "linkedin",
+      "url": "https://www.linkedin.com/"
+    },
+    {
+      "id": 4,
+      "name": "X",
+      "icon": "x",
+      "url": "https://twitter.com/"
+    }
+  ],
+  "footerInfo": [
+    {
+      "title": "©2023. All Rights Reserved."
+    },
+
+    {
+      "title": "Privacy Policy",
+      "url": "/privacy-policy"
+    },
+
+    {
+      "title": "Terms of Service",
+      "url": "/terms-of-service"
+    }
   ]
 }
