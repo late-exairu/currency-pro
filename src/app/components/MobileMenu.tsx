@@ -27,7 +27,7 @@ export default function MobileMenu() {
     <div
       className={`${
         isMenuOpen ? "translate-x-0 lg:translate-x-full" : "translate-x-full"
-      } fixed inset-y-0  right-0 w-screen bg-white/80 p-10 transition-transform duration-300 dark:bg-slate-800/80 md:w-[400px]`}
+      } fixed inset-y-0 right-0 w-screen bg-white p-10 transition-transform duration-300 dark:bg-slate-800/80 md:w-[400px]`}
     >
       <ul
         className={`${dmSans.className} flex-column gap-2.5 text-lg font-medium md:gap-5 lg:flex lg:gap-9`}
