@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import MobileMenu from "@/components/MobileMenu";
 import Footer from "@/components/Footer";
+import Overlay from "./components/Overlay";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         className={`${inter.className} flex min-h-screen flex-col overflow-x-hidden pt-[60px] md:pt-[72px] lg:pt-[96px]`}
       >
         <Header />
+        <Overlay />
         <MobileMenu />
 
         {children}

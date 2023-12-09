@@ -17,7 +17,7 @@ export default function Footer() {
 
   return (
     <footer
-      className={`${dmSans.className} flex flex-col gap-8 pt-10 md:gap-5 lg:gap-10 lg:pt-20 xl:gap-14 xl:pt-[120px]`}
+      className={`${dmSans.className} flex flex-col gap-8 pt-20 md:gap-5 lg:gap-10 lg:pt-28 xl:gap-14 xl:pt-[120px]`}
     >
       <div className="container sm:px-[50px] md:px-[60px] lg:px-[70px] xl:max-w-[1200px]">
         <div className="xs:grid-cols-2 grid grid-cols-1 items-start gap-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-5 lg:gap-4">
