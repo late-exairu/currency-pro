@@ -20,13 +20,13 @@ export default function Socials(props: SocialsProps) {
       {list.map((item) => (
         <li key={item.id}>
           <a
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 transition-colors hover:bg-slate-200"
+            className="bg-surface hover:bg-surface-heavy flex h-10 w-10 items-center justify-center rounded-full transition-colors"
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
           >
             <Icons
-              className="h-5 w-5 fill-slate-900"
+              className="fill-text-heavy h-5 w-5"
               icon={item.icon}
               title={item.name}
             />

@@ -3,20 +3,37 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --white: 255, 255, 255;
+  --black: 2, 6, 23;
+  --surface-light: 255, 255, 255;
+  --surface: 241, 245, 249;
+  --surface-heavy: 226, 232, 240;
+  --accent-light: 96, 165, 250;
+  --accent: 59, 130, 246;
+  --accent-heavy: 37, 99, 235;
+  --text-white: 255, 255, 255;
+  --text-light: 203, 213, 225;
+  --text: 100, 116, 139;
+  --text-heavy: 30, 41, 59;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --white: 2, 6, 23;
+    --black: 255, 255, 255;
+    --surface-light: 30, 41, 59;
+    --surface: 51, 65, 85;
+    --surface-heavy: 71, 85, 105;
+    --accent-light: 96, 165, 250;
+    --accent: 59, 130, 246;
+    --accent-heavy: 37, 99, 235;
+    --text-light: 71, 85, 105;
+    --text: 148, 163, 184;
+    --text-heavy: 241, 245, 249;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-end-rgb));
+  color: rgb(var(--text-heavy));
+  background: rgb(var(--surface-light));
 }

@@ -3,7 +3,7 @@
 import MenuButton from "@/components/MenuButton";
 import Link from "next/link";
 import { DM_Sans } from "next/font/google";
-import { usePersonStore } from "../state/store";
+import { usePersonStore } from "@/state/store";
 import data from "@/data/data.json";
 import UserBar from "./UserBar";
 
@@ -27,7 +27,7 @@ export default function MobileMenu() {
     <div
       className={`${
         isMenuOpen ? "translate-x-0 lg:translate-x-full" : "translate-x-full"
-      } fixed inset-y-0 right-0 w-screen bg-slate-100 p-10 transition-transform duration-300 md:w-[400px]`}
+      } fixed inset-y-0  right-0 w-screen bg-white/80 p-10 transition-transform duration-300 dark:bg-slate-800/80 md:w-[400px]`}
     >
       <ul
         className={`${dmSans.className} flex-column gap-2.5 text-lg font-medium md:gap-5 lg:flex lg:gap-9`}
@@ -35,7 +35,7 @@ export default function MobileMenu() {
         {menuData.map((item: menuItem) => (
           <li key={item.id}>
             <Link
-              className="flex h-12 items-center justify-center px-2.5 hover:text-blue-500"
+              className="hover:text-accent flex h-12 items-center justify-center px-2.5"
               href={item.url}
             >
               {item.title}

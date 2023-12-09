@@ -35,9 +35,9 @@ export default function Footer() {
                   <a
                     className={`${
                       index === 0
-                        ? "text-lg text-slate-900"
-                        : "text-md text-slate-500"
-                    } font-medium transition-colors hover:text-blue-500`}
+                        ? "text-text-heavy text-lg"
+                        : "text-md text-text"
+                    } hover:text-accent font-medium transition-colors`}
                     href={item.url}
                   >
                     {item.title}
@@ -53,10 +53,10 @@ export default function Footer() {
         <div className="flex flex-grow flex-col-reverse items-center justify-between gap-7 py-5 md:py-8 lg:my-auto lg:flex-row lg:py-10">
           <div className="flex flex-col gap-x-8 gap-y-2 text-center lg:flex-row">
             {footerInfo.map((info) => (
-              <p className="text-slate-500">
+              <p className="text-text">
                 {info.url ? (
                   <Link
-                    className="text-slate-500 transition-colors hover:text-blue-500"
+                    className="hover:text-accent text-text transition-colors"
                     href={info.url}
                   >
                     {info.title}

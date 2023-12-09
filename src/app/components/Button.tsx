@@ -4,17 +4,17 @@ const button = cva("font-medium transition-colors", {
   variants: {
     intent: {
       primary: [
-        "bg-blue-600",
+        "bg-accent-heavy",
         "text-white",
         "border-transparent",
-        "hover:bg-blue-500",
+        "hover:bg-accent",
       ],
       secondary: [
         "bg-transparent",
-        "text-gray-800",
+        "text-text-heavy",
         "border-transparent",
-        "hover:bg-gray-100",
-        "hover:text-blue-500",
+        "hover:bg-surface",
+        "hover:text-accent",
       ],
     },
     rounding: {

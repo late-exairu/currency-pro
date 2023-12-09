@@ -1,5 +1,5 @@
 "use client";
-import { usePersonStore } from "../state/store";
+import { usePersonStore } from "@/state/store";
 
 interface MenuButtonProps {
   className?: string;
@@ -10,7 +10,7 @@ export default function MenuButton({ className = "" }: MenuButtonProps = {}) {
   const toggleMenuOpen = usePersonStore((state) => state.toggleMenuOpen);
 
   const spanStyles =
-    "h-0.5 w-6 my-[2px] transition ease transform duration-200 bg-blue-600";
+    "h-0.5 w-6 my-[2px] transition ease transform duration-200 bg-accent-heavy";
 
   return (
     <button

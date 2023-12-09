@@ -25,6 +25,30 @@ const config: Config = {
       },
     },
     extend: {
+      colors: {
+        white: {
+          DEFAULT: "rgb(var(--white))",
+        },
+        black: {
+          DEFAULT: "rgb(var(--black))",
+        },
+        surface: {
+          DEFAULT: "rgb(var(--surface))",
+          light: "rgb(var(--surface-light))",
+          heavy: "rgb(var(--surface-heavy))",
+        },
+        text: {
+          DEFAULT: "rgb(var(--text))",
+          white: "rgb(var(--text-white))",
+          light: "rgb(var(--text-light))",
+          heavy: "rgb(var(--text-heavy))",
+        },
+        accent: {
+          DEFAULT: "rgb(var(--accent))",
+          light: "rgb(var(--accent-light))",
+          heavy: "rgb(var(--accent-heavy))",
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
