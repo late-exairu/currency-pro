@@ -29,7 +29,7 @@ export default function MobileMenu() {
         isMenuOpen
           ? "translate-x-0 shadow-lg lg:translate-x-full"
           : "translate-x-full"
-      } fixed inset-y-0 right-0 w-screen bg-white p-10 pt-20 transition-transform duration-300 dark:bg-slate-800/80 md:w-[400px]`}
+      } fixed inset-y-0 right-0 z-20 w-screen bg-white p-10 pt-20 transition-transform duration-300 dark:bg-slate-800/80 md:w-[400px]`}
     >
       <ul
         className={`${dmSans.className} flex-column gap-2.5 text-lg font-medium md:gap-5 lg:flex lg:gap-9`}
@@ -37,7 +37,7 @@ export default function MobileMenu() {
         {menuData.map((item: menuItem) => (
           <li key={item.id}>
             <Link
-              className="hover:text-accent flex h-12 items-center justify-center px-2.5"
+              className="flex h-12 items-center justify-center px-2.5 hover:text-accent"
               href={item.url}
             >
               {item.title}

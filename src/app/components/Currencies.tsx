@@ -42,7 +42,7 @@ export default function Currencies(props: Props) {
   }, [filterString]);
 
   return (
-    <ul className="grid grid-cols-2 gap-x-[18px] gap-y-[35px] md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+    <ul className="grid grid-cols-2 gap-x-3 gap-y-5 md:grid-cols-3 md:gap-x-[18px] md:gap-y-[35px] lg:grid-cols-4 xl:grid-cols-5">
       {filteredData.map((item: Currency) => (
         <CurrencyCard
           key={item.code}

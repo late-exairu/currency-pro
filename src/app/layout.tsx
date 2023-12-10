@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html className={`${isDarkMode ? "dark" : ""}`} lang="en">
       <body
-        className={`${inter.className} flex min-h-screen flex-col overflow-x-hidden pt-[60px] md:pt-[72px] lg:pt-[96px]`}
+        className={`${inter.className} flex min-h-screen flex-col overflow-x-hidden bg-surface pt-[60px] md:pt-[72px] lg:pt-[96px]`}
       >
         <Header />
         <Overlay />

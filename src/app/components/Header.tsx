@@ -21,7 +21,7 @@ export default function Header() {
   const menuData = data.mainMenu;
 
   return (
-    <header className="border-surface-heavy fixed inset-x-0 top-0 h-[60px] border-b bg-white/80 py-2 backdrop-blur-sm dark:bg-slate-800/80 md:h-[72px] md:py-4 lg:h-[96px] lg:py-6">
+    <header className="fixed inset-x-0 top-0 z-30 h-[60px] border-b border-surface-heavy bg-surface-light py-2  md:h-[72px] md:py-4 lg:h-[96px] lg:py-6">
       <div className="container relative flex justify-center md:justify-between">
         <Link className="flex items-center" href="/">
           <Logo className="h-10 w-[176px]" />
@@ -33,7 +33,7 @@ export default function Header() {
           {menuData.map((item: menuItem) => (
             <li key={item.id}>
               <Link
-                className="hover:text-accent flex h-12 items-center justify-center px-2.5 transition-colors"
+                className="flex h-12 items-center justify-center px-2.5 transition-colors hover:text-accent"
                 href={item.url}
               >
                 {item.title}

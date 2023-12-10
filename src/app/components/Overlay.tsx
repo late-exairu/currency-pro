@@ -8,7 +8,7 @@ export default function Overlay() {
     <div
       className={`${
         isMenuOpen ? "visible" : "invisible"
-      } bg-surface fixed inset-0 opacity-90 backdrop-blur-sm`}
+      } fixed inset-0 z-10 bg-surface opacity-90 backdrop-blur-sm`}
     />
   );
 }
