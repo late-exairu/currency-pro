@@ -4,25 +4,52 @@ import { useEffect, useState } from "react";
 import { usePersonStore } from "@/state/store";
 import CurrencyCard from "./CurrencyCard";
 
-const API_KEY = process.env.EXCHANGE_API_KEY;
+type Currency = {
+  code: string;
+  name: string;
+  symbol: string;
+};
 
-export default function Currencies(props: { data: [] }) {
-  const [filteredData, setFilteredData] = useState([]);
-  const filterString = usePersonStore((state) => state.filterString);
+type Props = {
+  data: {
+    data: {
+      [key: string]: any;
+    };
+  };
+};
+
+export default function Currencies(props: Props) {
   const { data } = props;
+  const [filteredData, setFilteredData] = useState<Currency[]>([]);
+  const filterString = usePersonStore((state) => state.filterString);
+
+  // convert data object to array
+  const currenciesArray = Object.keys(data.data).map((currencyCode) => ({
+    code: currencyCode,
+    ...data.data[currencyCode],
+  }));
 
   useEffect(() => {
+    console.log("currenciesArray", currenciesArray);
+
     setFilteredData(
-      data.filter((item: { title: string }) =>
-        item.title.toLowerCase().includes(filterString.toLowerCase()),
+      currenciesArray.filter(
+        (currency: Currency) =>
+          currency.code.toLowerCase().includes(filterString.toLowerCase()) ||
+          currency.name.toLowerCase().includes(filterString.toLowerCase()),
       ),
     );
   }, [filterString]);
 
   return (
     <ul className="grid grid-cols-2 gap-x-[18px] gap-y-[35px] md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-      {filteredData.map((item: { id: number; title: string; body: string }) => (
-        <CurrencyCard key={item.id} {...item} />
+      {filteredData.map((item: Currency) => (
+        <CurrencyCard
+          key={item.code}
+          name={item.name}
+          code={item.code}
+          symbol={item.symbol}
+        />
       ))}
     </ul>
   );
