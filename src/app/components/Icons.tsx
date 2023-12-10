@@ -126,8 +126,6 @@ export default function Icons(props: IconsProps) {
   const { className, icon, title } = props;
   const Icon = iconsSet[icon];
 
-  console.log(icon);
-
   if (!Icon) {
     return null;
   }

@@ -8,6 +8,7 @@ const button = cva("font-medium transition-colors", {
         "text-white",
         "border-transparent",
         "hover:bg-accent",
+        "dark:text-text-heavy",
       ],
       secondary: [
         "bg-transparent",
