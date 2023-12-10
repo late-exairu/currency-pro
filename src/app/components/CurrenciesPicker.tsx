@@ -29,10 +29,10 @@ export default async function CurrenciesPicker(props: {
 
   return (
     <div className="">
-      <div className="my-5 block flex-wrap items-center md:my-8 md:flex">
+      <div className="my-5 block flex-wrap items-center justify-between md:my-8 md:flex">
         <h3 className="text-xl sm:text-2xl lg:text-3xl">{title}</h3>
 
-        <FilterInput className="my-5 flex-1 md:m-0 md:ml-5" />
+        <FilterInput className="my-5 flex-1 md:m-0 md:ml-5 md:max-w-sm" />
       </div>
 
       <Currencies data={data} />
