@@ -4,19 +4,19 @@ import FilterInput from "./FilterInput";
 
 const API_KEY = process.env.EXCHANGE_API_KEY;
 
-export default async function CurrenciesPicker() {
+export default async function CurrenciesPicker(props: {
+  title: string;
+  base: boolean;
+}) {
+  const { title, base } = props;
   const requestUrl =
     `https://api.freecurrencyapi.com/v1/currencies ? apikey = ${API_KEY}`.replace(
       /\s/g,
       "",
     );
 
-  console.log("aaaaaaaaaaaaaaaaaaaaaaaaa", requestUrl);
-
   const res = await fetch(`${requestUrl}`);
   const data = await res.json();
-
-  // console.log(JSON.stringify(data));
 
   if (data?.message) {
     console.log(data.error);
@@ -30,9 +30,7 @@ export default async function CurrenciesPicker() {
   return (
     <div className="">
       <div className="my-5 block flex-wrap items-center md:my-8 md:flex">
-        <h3 className="text-xl md:text-2xl lg:text-3xl">
-          Select your base currency
-        </h3>
+        <h3 className="text-xl sm:text-2xl lg:text-3xl">{title}</h3>
 
         <FilterInput className="my-5 flex-1 md:m-0 md:ml-5" />
       </div>
