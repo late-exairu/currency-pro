@@ -31,10 +31,17 @@ export default function Currencies(props: CurrenciesProps) {
   );
 
   // convert data object to array
-  const currenciesArray = Object.keys(data.data).map((currencyCode) => ({
-    code: currencyCode,
-    ...data.data[currencyCode],
-  }));
+  const currenciesArray = Object.keys(data.data)
+    .map((currencyCode) => {
+      if (currencyCode === "RUB") {
+        return null;
+      }
+      return {
+        code: currencyCode,
+        ...data.data[currencyCode],
+      };
+    })
+    .filter(Boolean);
 
   const handleCurrencySelect = (code: string) => {
     if (isBaseCurrency) {
