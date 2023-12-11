@@ -16,12 +16,17 @@ type Props = {
       [key: string]: any;
     };
   };
+  isBaseCurrency: boolean;
 };
 
 export default function Currencies(props: Props) {
-  const { data } = props;
-  const [filteredData, setFilteredData] = useState<Currency[]>([]);
-  const filterString = usePersonStore((state) => state.filterString);
+  const { data, isBaseCurrency } = props;
+  const [filteredBaseData, setFilteredBaseData] = useState<Currency[]>([]);
+  const [filteredTargetData, setFilteredTargetData] = useState<Currency[]>([]);
+  const filterBaseString = usePersonStore((state) => state.filterBaseString);
+  const filterTargetString = usePersonStore(
+    (state) => state.filterTargetString,
+  );
 
   // convert data object to array
   const currenciesArray = Object.keys(data.data).map((currencyCode) => ({
@@ -30,27 +35,50 @@ export default function Currencies(props: Props) {
   }));
 
   useEffect(() => {
-    console.log("currenciesArray", currenciesArray);
-
-    setFilteredData(
+    setFilteredBaseData(
       currenciesArray.filter(
         (currency: Currency) =>
-          currency.code.toLowerCase().includes(filterString.toLowerCase()) ||
-          currency.name.toLowerCase().includes(filterString.toLowerCase()),
+          currency.code
+            .toLowerCase()
+            .includes(filterBaseString.toLowerCase()) ||
+          currency.name.toLowerCase().includes(filterBaseString.toLowerCase()),
       ),
     );
-  }, [filterString]);
+  }, [filterBaseString]);
+
+  useEffect(() => {
+    setFilteredTargetData(
+      currenciesArray.filter(
+        (currency: Currency) =>
+          currency.code
+            .toLowerCase()
+            .includes(filterTargetString.toLowerCase()) ||
+          currency.name
+            .toLowerCase()
+            .includes(filterTargetString.toLowerCase()),
+      ),
+    );
+  }, [filterTargetString]);
 
   return (
     <ul className="grid grid-cols-2 gap-x-3 gap-y-5 md:grid-cols-3 md:gap-x-[18px] md:gap-y-[35px] lg:grid-cols-4 xl:grid-cols-5">
-      {filteredData.map((item: Currency) => (
-        <CurrencyCard
-          key={item.code}
-          name={item.name}
-          code={item.code}
-          symbol={item.symbol}
-        />
-      ))}
+      {isBaseCurrency
+        ? filteredBaseData.map((item: Currency) => (
+            <CurrencyCard
+              key={item.code}
+              name={item.name}
+              code={item.code}
+              symbol={item.symbol}
+            />
+          ))
+        : filteredTargetData.map((item: Currency) => (
+            <CurrencyCard
+              key={item.code}
+              name={item.name}
+              code={item.code}
+              symbol={item.symbol}
+            />
+          ))}
     </ul>
   );
 }

@@ -1,22 +1,13 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Currencies from "./Currencies";
 import FilterInput from "./FilterInput";
 
-const API_KEY = process.env.EXCHANGE_API_KEY;
-
-export default async function CurrenciesPicker(props: {
+export default function CurrencyPicker(props: {
+  data: any;
   title: string;
-  base: boolean;
+  isBaseCurrency: boolean;
 }) {
-  const { title, base } = props;
-  const requestUrl =
-    `https://api.freecurrencyapi.com/v1/currencies ? apikey = ${API_KEY}`.replace(
-      /\s/g,
-      "",
-    );
-
-  const res = await fetch(`${requestUrl}`);
-  const data = await res.json();
+  const { title, isBaseCurrency, data } = props;
 
   if (data?.message) {
     console.log(data.error);
@@ -32,10 +23,13 @@ export default async function CurrenciesPicker(props: {
       <div className="my-5 block flex-wrap items-center justify-between md:my-8 md:flex">
         <h3 className="text-xl sm:text-2xl lg:text-3xl">{title}</h3>
 
-        <FilterInput className="my-5 flex-1 md:m-0 md:ml-5 md:max-w-sm" />
+        <FilterInput
+          isBaseCurrency={isBaseCurrency}
+          className="my-5 flex-1 md:m-0 md:ml-5 md:max-w-sm"
+        />
       </div>
 
-      <Currencies data={data} />
+      <Currencies isBaseCurrency={isBaseCurrency} data={data} />
     </div>
   );
 }
