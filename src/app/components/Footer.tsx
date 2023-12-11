@@ -17,12 +17,12 @@ export default function Footer() {
 
   return (
     <footer
-      className={`${dmSans.className} mt-20 flex flex-col gap-8 bg-surface-light pt-20 md:mt-32 md:gap-5 lg:gap-10 lg:pt-28 xl:gap-14 xl:pt-[120px]`}
+      className={`${dmSans.className} bg-surface-light md:mt-15 mt-10 flex flex-col gap-8 pt-20 md:gap-5 lg:gap-10 lg:pt-28 xl:gap-14 xl:pt-[120px]`}
     >
       <div className="container sm:px-[50px] md:px-[60px] lg:px-[70px] xl:max-w-[1200px]">
-        <div className="grid grid-cols-1 items-start gap-5 gap-y-8 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 lg:gap-4">
+        <div className="xs:grid-cols-2 grid grid-cols-1 items-start gap-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-5 lg:gap-4">
           <Link
-            className="md:col-span-auto col-span-1 mx-auto flex auto-cols-fr justify-self-start xs:col-span-2 sm:col-span-1 sm:mx-0"
+            className="md:col-span-auto xs:col-span-2 col-span-1 mx-auto flex auto-cols-fr justify-self-start sm:col-span-1 sm:mx-0"
             href="/"
           >
             <Logo className="h-10 w-full max-w-[176px]" />
@@ -31,13 +31,13 @@ export default function Footer() {
           {footerMenuData.map((menu) => (
             <ul className="flex flex-1 flex-col gap-2 md:gap-4">
               {menu.map((item, index) => (
-                <li key={item.id} className="text-center xs:text-left">
+                <li key={item.id} className="xs:text-left text-center">
                   <a
                     className={`${
                       index === 0
-                        ? "text-lg text-text-heavy"
+                        ? "text-text-heavy text-lg"
                         : "text-md text-text"
-                    } font-medium transition-colors hover:text-accent`}
+                    } hover:text-accent font-medium transition-colors`}
                     href={item.url}
                   >
                     {item.title}
@@ -56,7 +56,7 @@ export default function Footer() {
               <p className="text-text">
                 {info.url ? (
                   <Link
-                    className="text-text transition-colors hover:text-accent"
+                    className="text-text hover:text-accent transition-colors"
                     href={info.url}
                   >
                     {info.title}
