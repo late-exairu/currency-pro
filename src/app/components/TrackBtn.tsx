@@ -11,7 +11,7 @@ export default function TrackBtn() {
   return (
     <Button
       disabled={baseCurrency && targetCurrency ? false : true}
-      className="mx-auto mt-10 flex items-center disabled:cursor-not-allowed disabled:opacity-30 md:mt-20"
+      className="mx-auto mt-5 flex items-center disabled:cursor-not-allowed disabled:opacity-30 md:mt-6"
     >
       Track exchange rate
     </Button>
