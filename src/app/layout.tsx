@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import MobileMenu from "@/components/MobileMenu";
 import Footer from "@/components/Footer";
 import Overlay from "./components/Overlay";
+import StateViewer from "./components/StateViewer";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -24,7 +25,7 @@ export default function RootLayout({
   return (
     <html className={`${isDarkMode ? "dark" : ""}`} lang="en">
       <body
-        className={`${inter.className} flex min-h-screen flex-col overflow-x-hidden bg-surface pt-[60px] md:pt-[72px] lg:pt-[96px]`}
+        className={`${inter.className} bg-surface flex min-h-screen flex-col overflow-x-hidden pt-[60px] md:pt-[72px] lg:pt-[96px]`}
       >
         <Header />
         <Overlay />
@@ -33,6 +34,7 @@ export default function RootLayout({
         {children}
 
         <Footer />
+        <StateViewer />
       </body>
     </html>
   );
