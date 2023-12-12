@@ -12,23 +12,12 @@ export default async function Conversion(params: { slug: string }) {
 
   return (
     <div className="text-center">
-      <h2 className="text-2xl font-bold text-text-heavy xs:text-3xl md:text-[42px]">
+      <h2 className="mb-4 text-2xl font-bold text-text-heavy xs:mb-6 xs:text-3xl md:mb-8 md:text-[42px]">
         Currency<span className="text-accent-heavy">pro</span> Converter
       </h2>
-      <p className="text-md text-text xs:text-lg md:text-2xl">
+      <p className="text-md my-4 text-text xs:my-6 xs:text-lg md:my-8 md:text-2xl">
         Check live foreign currency exchange rates
       </p>
-
-      <div className="flex flex-col">
-        <label className="text-md text-text xs:text-lg md:text-2xl">
-          Enter Amount
-        </label>
-        <input
-          className="mb-4 mt-2 rounded-md bg-surface p-2 text-center text-lg font-bold text-accent-heavy active:border-none active:outline-none xs:text-2xl md:text-5xl"
-          type="number"
-          placeholder="1.0"
-        />
-      </div>
 
       <Suspense fallback={<div>Loading...</div>}>
         <Converter
