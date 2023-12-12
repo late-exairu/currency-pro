@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
-import Currencies from "./Currencies";
-import FilterInput from "./FilterInput";
+import Currencies from "@/components/Currencies";
+import FilterInput from "@/components/FilterInput";
 
 export default function CurrencyPicker(props: {
   data: any;

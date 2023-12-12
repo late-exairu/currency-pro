@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { usePersonStore } from "@/state/store";
-import CurrencyCard from "./CurrencyCard";
+import CurrencyCard from "@/components/CurrencyCard";
 
 interface Currency {
   code: string;

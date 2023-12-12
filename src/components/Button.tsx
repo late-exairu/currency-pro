@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority";
 
-const button = cva("font-medium transition-colors", {
+const button = cva("items-center font-medium transition-colors", {
   variants: {
     intent: {
       primary: [

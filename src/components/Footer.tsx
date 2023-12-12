@@ -1,8 +1,8 @@
+import Link from "next/link";
 import { DM_Sans } from "next/font/google";
 import data from "@/data/data.json";
-import Link from "next/link";
-import Logo from "./Logo";
-import Socials from "./Socials";
+import Logo from "@/components/Logo";
+import Socials from "@/components/Socials";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],

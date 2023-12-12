@@ -3,12 +3,8 @@ import CurrencyPicker from "@/components/CurrencyPicker";
 const API_KEY = process.env.EXCHANGE_API_KEY;
 
 export default async function CurrencyPickersWrap() {
-  const requestUrl =
-    `https://api.freecurrencyapi.com/v1/currencies ? apikey = ${API_KEY}`.replace(
-      /\s/g,
-      "",
-    );
-
+  const requestUrl = `https://api.freecurrencyapi.com/v1/currencies ?
+    apikey = ${API_KEY}`.replace(/\s/g, "");
   const res = await fetch(`${requestUrl}`);
   const data = await res.json();
 

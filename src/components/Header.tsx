@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { DM_Sans } from "next/font/google";
-import Logo from "./Logo";
+import Logo from "@/components/Logo";
 import data from "@/data/data.json";
 import MenuButton from "@/components/MenuButton";
-import UserBar from "./UserBar";
+import UserBar from "@/components/UserBar";
 
 interface menuItem {
   id: number;
