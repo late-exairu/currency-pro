@@ -1,25 +1,21 @@
 import CurrencyPicker from "@/components/CurrencyPicker";
-
-const API_KEY = process.env.EXCHANGE_API_KEY;
+import getAllCurrencies from "@/lib/getCurrencies";
 
 export default async function CurrencyPickersWrap() {
-  const requestUrl = `https://api.freecurrencyapi.com/v1/currencies ?
-    apikey = ${API_KEY}`.replace(/\s/g, "");
-  const res = await fetch(`${requestUrl}`);
-  const data = await res.json();
+  const allCurrenciesData = await getAllCurrencies();
 
   return (
-    <div>
+    <>
       <CurrencyPicker
-        data={data}
+        data={allCurrenciesData}
         title="Select your base currency"
         isBaseCurrency={true}
       />
       <CurrencyPicker
-        data={data}
+        data={allCurrenciesData}
         title="Select your target currency"
         isBaseCurrency={false}
       />
-    </div>
+    </>
   );
 }
