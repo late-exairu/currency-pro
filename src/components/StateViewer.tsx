@@ -11,15 +11,15 @@ export default function StateViewer() {
   const targetCurrency = usePersonStore((state) => state.targetCurrency);
 
   return (
-    <div className="bg-surface-light fixed bottom-0 left-0 p-5 shadow-md shadow-slate-600">
-      <p className="text-text-heavy text-sm">
+    <div className="fixed bottom-0 left-0 bg-surface-light p-5 shadow-md shadow-slate-600">
+      <p className="text-sm text-text-heavy">
         Showing results for: {filterBaseString}
       </p>
-      <p className="text-text-heavy text-sm">
+      <p className="text-sm text-text-heavy">
         Showing results for: {filterTargetString}
       </p>
-      <p className="text-text-heavy text-sm">Base currency: {baseCurrency}</p>
-      <p className="text-text-heavy text-sm">
+      <p className="text-sm text-text-heavy">Base currency: {baseCurrency}</p>
+      <p className="text-sm text-text-heavy">
         Target currency: {targetCurrency}
       </p>
     </div>

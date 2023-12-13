@@ -97,6 +97,28 @@ const Moon = (props: IconProps) => {
     </svg>
   );
 };
+const Switch = (props: IconProps) => {
+  const { className, title } = props;
+
+  return (
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <g clipPath="url(#a)">
+        {title ?? <title>{title}</title>}
+        <path d="M16.05 12.05 21 17l-4.95 4.95-1.414-1.414 2.536-2.537L4 18v-2h13.172l-2.536-2.536 1.414-1.414Zm-8.1-10 1.414 1.414L6.828 6H20v2H6.828l2.536 2.536L7.95 11.95 3 7l4.95-4.95Z" />
+      </g>
+      <defs>
+        <clipPath id="a">
+          <path d="M0 0h24v24H0z" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
 
 interface IconProps {
   className?: string;
@@ -120,6 +142,7 @@ const iconsSet: IconsSet = {
   x: X,
   sun: Sun,
   moon: Moon,
+  switch: Switch,
 };
 
 export default function Icons(props: IconsProps) {

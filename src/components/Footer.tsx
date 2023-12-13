@@ -52,8 +52,8 @@ export default function Footer() {
       <div className="container flex sm:px-[50px] md:px-[60px] lg:px-[70px] xl:max-w-[1200px]">
         <div className="flex flex-grow flex-col-reverse items-center justify-between gap-7 py-5 md:py-8 lg:my-auto lg:flex-row lg:py-10">
           <div className="flex flex-col gap-x-8 gap-y-2 text-center lg:flex-row">
-            {footerInfo.map((info) => (
-              <p className="text-text">
+            {footerInfo.map((info, index) => (
+              <p key={index} className="text-text">
                 {info.url ? (
                   <Link
                     className="text-text transition-colors hover:text-accent"
