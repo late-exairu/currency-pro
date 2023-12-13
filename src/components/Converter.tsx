@@ -91,7 +91,7 @@ export default function Converter(props: ConverterProps) {
         </label>
         <input
           onChange={(e) => handleAmountChange(e)}
-          className="my-2 h-12 rounded-full bg-surface p-2 text-center text-3xl font-bold text-accent-heavy outline-none transition-all focus:border-none focus:placeholder-accent dark:text-text-heavy dark:focus:placeholder-text-heavy xs:text-4xl sm:h-14 md:my-4 md:h-14 md:text-5xl lg:my-5 lg:h-16"
+          className="my-2 h-12 rounded-full bg-surface p-2 text-center text-3xl font-bold text-accent-heavy outline-none focus:border-none focus:placeholder-accent dark:text-text-heavy dark:focus:placeholder-text-heavy xs:text-4xl sm:h-14 md:my-4 md:h-14 md:text-5xl lg:my-5 lg:h-16"
           type="text"
           value={`${amount}`}
           placeholder={`${baseCurrencyData.symbol} 1.00`}
