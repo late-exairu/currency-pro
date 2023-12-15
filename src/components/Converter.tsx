@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePersonStore } from "@/state/store";
 import Icons from "./Icons";
+import Link from "next/link";
 interface ConverterProps {
   allCurrenciesData: any; // replace 'any' with the actual type
   pairConversionRateData: any; // replace 'any' with the actual type
@@ -106,18 +107,16 @@ export default function Converter(props: ConverterProps) {
               <span className="text-text">{baseCurrencyData.name}</span>
             </div>
           </div>
-          <button
-            onClick={() => {
-              // usePersonStore.setState({ baseCurrency: targetCurrency });
-              // usePersonStore.setState({ targetCurrency: baseCurrency });
-            }}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-light shadow-md md:h-16 md:w-16"
+
+          <Link
+            href={`/conversion/${targetCurrency}/${baseCurrency}`}
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-light shadow-md transition-shadow hover:shadow-[0_2px_2px_rgb(0,0,0,0.1)] md:h-16 md:w-16"
           >
             <Icons
               icon="switch"
               className="h-5 w-5 fill-text-heavy md:h-6 md:w-6"
             />
-          </button>
+          </Link>
           <div className="flex flex-1 justify-start">
             <div className="flex h-10 items-center whitespace-nowrap rounded-full bg-surface-light px-5 text-base shadow-md md:h-16 md:px-8 md:text-xl">
               {targetCurrencyData.code}-

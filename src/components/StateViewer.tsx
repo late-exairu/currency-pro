@@ -13,10 +13,10 @@ export default function StateViewer() {
   return (
     <div className="fixed bottom-0 left-0 bg-surface-light p-5 shadow-md shadow-slate-600">
       <p className="text-sm text-text-heavy">
-        Showing results for: {filterBaseString}
+        Filter for base: {filterBaseString}
       </p>
       <p className="text-sm text-text-heavy">
-        Showing results for: {filterTargetString}
+        Filter for target: {filterTargetString}
       </p>
       <p className="text-sm text-text-heavy">Base currency: {baseCurrency}</p>
       <p className="text-sm text-text-heavy">

@@ -13,7 +13,7 @@ export default function TrackBtn() {
   return (
     <div className="mt-5 flex md:mt-6">
       <Link
-        href={`conversion/${baseCurrency}/${targetCurrency}`}
+        href={`/conversion/${baseCurrency}/${targetCurrency}`}
         aria-disabled={isDisabled}
         tabIndex={isDisabled ? -1 : undefined}
         onClick={(e) => {
