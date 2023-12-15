@@ -21,8 +21,8 @@ export default function Converter(props: ConverterProps) {
 
   const baseCurrency = usePersonStore((state) => state.baseCurrency);
   const targetCurrency = usePersonStore((state) => state.targetCurrency);
-  const baseCurrencyData = allCurrenciesData.data[baseCurrency];
-  const targetCurrencyData = allCurrenciesData.data[targetCurrency];
+  const baseCurrencyData = allCurrenciesData[baseCurrency];
+  const targetCurrencyData = allCurrenciesData[targetCurrency];
 
   useEffect(() => {
     setConversionRate(pairConversionRateData.data[targetCurrency]);

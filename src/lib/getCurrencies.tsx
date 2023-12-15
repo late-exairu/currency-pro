@@ -10,5 +10,8 @@ export default async function getAllCurrencies() {
     throw new Error("Failed to fetch currencies from API");
   }
 
-  return await response.json();
+  let data = (await response.json()).data;
+  delete data["RUB"];
+
+  return data;
 }

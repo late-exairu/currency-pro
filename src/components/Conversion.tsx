@@ -1,8 +1,12 @@
+import { redirect } from "next/navigation";
 import getAllCurrencies from "@/lib/getCurrencies";
 import getPairConversionRate from "@/lib/getPairConversionRate";
 import Converter from "./Converter";
 
 export default async function Conversion(params: { slug: string }) {
+  if (!params.slug || params.slug.length !== 2) {
+    redirect(`/conversion/USD/EUR`);
+  }
   const allCurrenciesData = await getAllCurrencies();
   const conversionPair = [params.slug[0], params.slug[1]];
   const pairConversionRateData = await getPairConversionRate(

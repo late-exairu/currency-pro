@@ -8,7 +8,6 @@ export default function TrackBtn() {
   const baseCurrency = usePersonStore((state) => state.baseCurrency);
   const targetCurrency = usePersonStore((state) => state.targetCurrency);
   const isDisabled = baseCurrency && targetCurrency ? false : true;
-  console.log(baseCurrency, targetCurrency);
 
   return (
     <div className="mt-5 flex md:mt-6">
