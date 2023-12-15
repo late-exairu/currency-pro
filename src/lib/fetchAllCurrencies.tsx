@@ -1,6 +1,6 @@
 const API_KEY = process.env.EXCHANGE_API_KEY;
 
-export default async function getAllCurrencies() {
+export default async function fetchAllCurrencies() {
   const requestUrl = `https://api.freecurrencyapi.com/v1/currencies ?
     apikey = ${API_KEY}`.replace(/\s/g, "");
 

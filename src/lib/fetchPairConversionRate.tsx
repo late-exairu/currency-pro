@@ -1,6 +1,6 @@
 const API_KEY = process.env.EXCHANGE_API_KEY;
 
-export default async function getPairConversionRate(
+export default async function fetchPairConversionRate(
   baseCurrency: string,
   targetCurrency: string,
 ) {

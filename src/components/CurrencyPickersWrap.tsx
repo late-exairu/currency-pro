@@ -1,8 +1,8 @@
 import CurrencyPicker from "@/components/CurrencyPicker";
-import getAllCurrencies from "@/lib/getCurrencies";
+import fetchAllCurrencies from "@/lib/fetchAllCurrencies";
 
 export default async function CurrencyPickersWrap() {
-  const allCurrenciesData = await getAllCurrencies();
+  const allCurrenciesData = await fetchAllCurrencies();
 
   return (
     <>
