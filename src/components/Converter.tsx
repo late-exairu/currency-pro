@@ -103,6 +103,9 @@ export default function Converter(props: ConverterProps) {
         <div className="mx-auto flex flex-shrink flex-col items-center gap-2 sm:flex-row md:gap-4">
           <div className="flex flex-1 justify-end">
             <div className="flex h-10 items-center whitespace-nowrap rounded-full bg-surface-light px-5 text-base shadow-md md:h-16 md:px-8 md:text-xl">
+              <span
+                className={`currency-flag mr-2 shadow-[0_1px_2px_rgb(0,0,0,0.2)] currency-flag-${baseCurrencyData.code.toLowerCase()}`}
+              />
               {baseCurrencyData.code}-
               <span className="text-text">{baseCurrencyData.name}</span>
             </div>
@@ -119,6 +122,9 @@ export default function Converter(props: ConverterProps) {
           </Link>
           <div className="flex flex-1 justify-start">
             <div className="flex h-10 items-center whitespace-nowrap rounded-full bg-surface-light px-5 text-base shadow-md md:h-16 md:px-8 md:text-xl">
+              <span
+                className={`currency-flag mr-2 shadow-[0_1px_2px_rgb(0,0,0,0.2)] currency-flag-${targetCurrencyData.code.toLowerCase()}`}
+              />
               {targetCurrencyData.code}-
               <span className="text-text">{targetCurrencyData.name}</span>
             </div>
@@ -155,9 +161,6 @@ export default function Converter(props: ConverterProps) {
           {/* — Last updated 5 minutes ago */}
         </p>
       </div>
-
-      {/* {JSON.stringify(allCurrenciesData)}
-      {JSON.stringify(pairConversionRateData)} */}
     </>
   );
 }

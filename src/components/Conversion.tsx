@@ -1,7 +1,9 @@
+import { Suspense } from "react";
 import { redirect } from "next/navigation";
 import getAllCurrencies from "@/lib/getCurrencies";
 import getPairConversionRate from "@/lib/getPairConversionRate";
 import Converter from "./Converter";
+import Preloader from "./Preloader";
 
 export default async function Conversion(params: { slug: string }) {
   if (!params.slug || params.slug.length !== 2) {
@@ -22,12 +24,13 @@ export default async function Conversion(params: { slug: string }) {
       <p className="text-md bm-4 mt-0 text-text xs:my-6 xs:text-lg md:my-8 md:text-2xl">
         Check live foreign currency exchange rates
       </p>
-
-      <Converter
-        allCurrenciesData={allCurrenciesData}
-        conversionPair={conversionPair}
-        pairConversionRateData={pairConversionRateData}
-      />
+      <Suspense fallback={<Preloader />}>
+        <Converter
+          allCurrenciesData={allCurrenciesData}
+          conversionPair={conversionPair}
+          pairConversionRateData={pairConversionRateData}
+        />
+      </Suspense>
     </div>
   );
 }

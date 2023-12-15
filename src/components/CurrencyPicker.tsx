@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import CurrenciesList from "@/components/CurrenciesList";
 import FilterInput from "@/components/FilterInput";
 
@@ -29,9 +28,7 @@ export default function CurrencyPicker(props: {
           className="my-5 flex-1 md:m-0 md:ml-5 md:max-w-sm"
         />
       </div>
-      <Suspense fallback={<p>Loading...</p>}>
-        <CurrenciesList isBaseCurrency={isBaseCurrency} data={data} />
-      </Suspense>
+      <CurrenciesList isBaseCurrency={isBaseCurrency} data={data} />
     </div>
   );
 }

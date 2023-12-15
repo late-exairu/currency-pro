@@ -680,6 +680,11 @@ csstype@^3.0.2:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.2.tgz#1d4bf9d572f11c14031f0436e1c10bc1f571f50b"
   integrity sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==
 
+currency-flags@^4.0.7:
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/currency-flags/-/currency-flags-4.0.7.tgz#22d6b7b4a33c58cf60e7e1c1ff845fdb317b600f"
+  integrity sha512-NT5i/iKmJphJPnEkJ1HQOfnNvLkkD3oPBEymS6/qufckHqzBQ6DG70fF2hUgI9bfFbpORKnMIH5dW/ucBbqPEg==
+
 damerau-levenshtein@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz#b43d286ccbd36bc5b2f7ed41caf2d0aba1f8a6e7"

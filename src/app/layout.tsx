@@ -8,7 +8,11 @@ import Footer from "@/components/Footer";
 import Overlay from "@/components/Overlay";
 import StateViewer from "@/components/StateViewer";
 
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: false,
+});
 
 export const metadata: Metadata = {
   title: "CurrencyPro - Currency Converter",
@@ -34,7 +38,7 @@ export default function RootLayout({
         {children}
 
         <Footer />
-        <StateViewer />
+        {/* <StateViewer /> */}
       </body>
     </html>
   );
