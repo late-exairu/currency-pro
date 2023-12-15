@@ -77,6 +77,20 @@ export default function Currencies(props: CurrenciesProps) {
     />
   );
 
+  const notFoundHtml = (
+    <div className="flex h-28 items-center justify-center">
+      <p className="text-xl font-medium text-text">No results found</p>
+    </div>
+  );
+
+  if (isBaseCurrency && !filteredBaseData.length) {
+    return notFoundHtml;
+  }
+
+  if (!isBaseCurrency && !filteredTargetData.length) {
+    return notFoundHtml;
+  }
+
   return (
     <ul className="my-5 grid grid-cols-2 gap-x-2 gap-y-3 sm:gap-x-3 sm:gap-y-4 md:my-8 md:grid-cols-3 md:gap-x-[18px] md:gap-y-[35px] lg:grid-cols-4 xl:grid-cols-5">
       {isBaseCurrency
