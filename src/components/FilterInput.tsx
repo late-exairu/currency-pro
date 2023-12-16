@@ -39,7 +39,7 @@ export default function FilterInput(props: {
         }
         type="text"
         placeholder="Search"
-        className="w-full rounded-md border border-surface-heavy bg-white px-3 py-2 text-text-heavy outline-none transition-shadow focus:ring-2 focus:ring-accent dark:bg-surface"
+        className="w-full rounded-md border border-surface-heavy bg-surface-light px-3 py-2 text-text-heavy outline-none transition-shadow focus:ring-2 focus:ring-accent"
       />
     </div>
   );

@@ -7,6 +7,7 @@ import MobileMenu from "@/components/MobileMenu";
 import Footer from "@/components/Footer";
 import Overlay from "@/components/Overlay";
 import StateViewer from "@/components/StateViewer";
+import ThemeProvider from "@/providers/ThemeProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,14 +32,16 @@ export default function RootLayout({
       <body
         className={`${inter.className} flex min-h-screen flex-col overflow-x-hidden bg-surface pt-[60px] md:pt-[72px] lg:pt-[96px]`}
       >
-        <Header />
-        <Overlay />
-        <MobileMenu />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Header />
+          <Overlay />
+          <MobileMenu />
 
-        {children}
+          {children}
 
-        <Footer />
-        {/* <StateViewer /> */}
+          <Footer />
+          {/* <StateViewer /> */}
+        </ThemeProvider>
       </body>
     </html>
   );
