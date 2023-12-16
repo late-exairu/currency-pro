@@ -1,11 +1,11 @@
 "use client";
-import { usePersonStore } from "@/state/store";
+import { useStore } from "@/state/store";
 import Icons from "@/components/Icons";
 import Button from "@/components/Button";
 
 export default function DarkModeSwitch() {
-  const isDarkMode = usePersonStore((state) => state.isDarkMode);
-  const toggleDarkMode = usePersonStore((state) => state.toggleDarkMode);
+  const isDarkMode = useStore((state) => state.isDarkMode);
+  const toggleDarkMode = useStore((state) => state.toggleDarkMode);
 
   return (
     <button
@@ -17,13 +17,13 @@ export default function DarkModeSwitch() {
       <div className="flex -translate-y-10 flex-col transition-transform duration-300 group-[.dark]:translate-y-0">
         <div className="flex h-10 w-10 items-center justify-center">
           <Icons
-            className="fill-accent-light group-hover:fill-accent h-6 w-6 transition-colors"
+            className="h-6 w-6 fill-accent-light transition-colors group-hover:fill-accent"
             icon="moon"
           />
         </div>
         <div className="flex h-10 w-10 items-center justify-center">
           <Icons
-            className="fill-accent-light group-hover:fill-accent h-6 w-6 transition-colors"
+            className="h-6 w-6 fill-accent-light transition-colors group-hover:fill-accent"
             icon="sun"
           />
         </div>

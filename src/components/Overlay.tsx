@@ -1,8 +1,8 @@
 "use client";
-import { usePersonStore } from "@/state/store";
+import { useStore } from "@/state/store";
 
 export default function Overlay() {
-  const isMenuOpen = usePersonStore((state) => state.isMenuOpen);
+  const isMenuOpen = useStore((state) => state.isMenuOpen);
 
   return (
     <div

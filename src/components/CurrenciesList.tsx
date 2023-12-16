@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePersonStore } from "@/state/store";
+import { useStore } from "@/state/store";
 import CurrencyCard from "@/components/CurrencyCard";
 
 interface Currency {
@@ -21,12 +21,10 @@ export default function Currencies(props: CurrenciesProps) {
   const { data, isBaseCurrency } = props;
   const [filteredBaseData, setFilteredBaseData] = useState<Currency[]>([]);
   const [filteredTargetData, setFilteredTargetData] = useState<Currency[]>([]);
-  const baseCurrency = usePersonStore((state) => state.baseCurrency);
-  const targetCurrency = usePersonStore((state) => state.targetCurrency);
-  const filterBaseString = usePersonStore((state) => state.filterBaseString);
-  const filterTargetString = usePersonStore(
-    (state) => state.filterTargetString,
-  );
+  const baseCurrency = useStore((state) => state.baseCurrency);
+  const targetCurrency = useStore((state) => state.targetCurrency);
+  const filterBaseString = useStore((state) => state.filterBaseString);
+  const filterTargetString = useStore((state) => state.filterTargetString);
 
   // convert data object to array
   const currenciesArray = Object.keys(data)
@@ -40,9 +38,9 @@ export default function Currencies(props: CurrenciesProps) {
 
   const handleCurrencySelect = (code: string) => {
     if (isBaseCurrency) {
-      usePersonStore.setState({ baseCurrency: code });
+      useStore.setState({ baseCurrency: code });
     } else {
-      usePersonStore.setState({ targetCurrency: code });
+      useStore.setState({ targetCurrency: code });
     }
   };
 

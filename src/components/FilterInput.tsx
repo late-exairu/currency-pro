@@ -1,22 +1,22 @@
 "use client";
 
-import { usePersonStore } from "@/state/store";
+import { useStore } from "@/state/store";
 
 export default function FilterInput(props: {
   className?: string;
   isBaseCurrency: boolean;
 }) {
   const { className, isBaseCurrency } = props;
-  // const filterBaseString = usePersonStore((state) => state.filterBaseString);
-  // const filterTargetString = usePersonStore(
+  // const filterBaseString = useStore((state) => state.filterBaseString);
+  // const filterTargetString = useStore(
   //   (state) => state.filterTargetString,
   // );
 
-  const handleFilterBaseStringInput = usePersonStore(
+  const handleFilterBaseStringInput = useStore(
     (state) => state.setFilterBaseString,
   );
 
-  const handleFilterTargetStringInput = usePersonStore(
+  const handleFilterTargetStringInput = useStore(
     (state) => state.setFilterTargetString,
   );
 
@@ -39,7 +39,7 @@ export default function FilterInput(props: {
         }
         type="text"
         placeholder="Search"
-        className="border-surface-heavy text-text-heavy focus:ring-accent dark:bg-surface w-full rounded-md border bg-white px-3 py-2 outline-none transition-shadow focus:ring-2"
+        className="w-full rounded-md border border-surface-heavy bg-white px-3 py-2 text-text-heavy outline-none transition-shadow focus:ring-2 focus:ring-accent dark:bg-surface"
       />
     </div>
   );

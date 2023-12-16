@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { usePersonStore } from "@/state/store";
+import { useStore } from "@/state/store";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import MobileMenu from "@/components/MobileMenu";
@@ -24,7 +24,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const isDarkMode = usePersonStore.getState().isDarkMode;
+  const isDarkMode = useStore.getState().isDarkMode;
 
   return (
     <html className={`${isDarkMode ? "dark" : ""}`} lang="en">

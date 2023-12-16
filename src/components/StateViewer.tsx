@@ -1,14 +1,12 @@
 "use client";
 
-import { usePersonStore } from "@/state/store";
+import { useStore } from "@/state/store";
 
 export default function StateViewer() {
-  const filterBaseString = usePersonStore((state) => state.filterBaseString);
-  const filterTargetString = usePersonStore(
-    (state) => state.filterTargetString,
-  );
-  const baseCurrency = usePersonStore((state) => state.baseCurrency);
-  const targetCurrency = usePersonStore((state) => state.targetCurrency);
+  const filterBaseString = useStore((state) => state.filterBaseString);
+  const filterTargetString = useStore((state) => state.filterTargetString);
+  const baseCurrency = useStore((state) => state.baseCurrency);
+  const targetCurrency = useStore((state) => state.targetCurrency);
 
   return (
     <div className="fixed bottom-0 left-0 bg-surface-light p-5 shadow-md shadow-slate-600">

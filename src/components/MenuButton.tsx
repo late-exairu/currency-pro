@@ -1,13 +1,13 @@
 "use client";
-import { usePersonStore } from "@/state/store";
+import { useStore } from "@/state/store";
 
 interface MenuButtonProps {
   className?: string;
 }
 
 export default function MenuButton({ className = "" }: MenuButtonProps = {}) {
-  const isMenuOpen = usePersonStore((state) => state.isMenuOpen);
-  const toggleMenuOpen = usePersonStore((state) => state.toggleMenuOpen);
+  const isMenuOpen = useStore((state) => state.isMenuOpen);
+  const toggleMenuOpen = useStore((state) => state.toggleMenuOpen);
 
   const spanStyles =
     "h-0.5 w-6 my-[2px] transition ease transform duration-200 bg-accent-heavy";

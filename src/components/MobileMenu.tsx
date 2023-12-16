@@ -3,7 +3,7 @@
 import MenuButton from "@/components/MenuButton";
 import Link from "next/link";
 import { DM_Sans } from "next/font/google";
-import { usePersonStore } from "@/state/store";
+import { useStore } from "@/state/store";
 import data from "@/data/data.json";
 import UserBar from "@/components/UserBar";
 
@@ -21,7 +21,7 @@ const dmSans = DM_Sans({
 
 export default function MobileMenu() {
   const menuData = data.mainMenu;
-  const isMenuOpen = usePersonStore((state) => state.isMenuOpen);
+  const isMenuOpen = useStore((state) => state.isMenuOpen);
 
   return (
     <div

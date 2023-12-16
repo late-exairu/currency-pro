@@ -1,5 +1,4 @@
 import { create } from "zustand";
-// import useMediaQuery from "../hooks/useMediaQuery";
 
 type State = {
   isMenuOpen: boolean;
@@ -9,7 +8,6 @@ type State = {
   filterTargetString: string;
   baseCurrency: string;
   targetCurrency: string;
-  // isScreenLg: boolean;
 };
 
 type Action = {
@@ -24,7 +22,7 @@ type Action = {
   setTargetCurrency: (targetCurrency: State["targetCurrency"]) => void;
 };
 
-export const usePersonStore = create<State & Action>((set) => ({
+export const useStore = create<State & Action>((set) => ({
   isMenuOpen: false,
   isDarkMode: false,
   allCurrencies: [],
@@ -45,5 +43,4 @@ export const usePersonStore = create<State & Action>((set) => ({
     set(() => ({ filterTargetString })),
   setBaseCurrency: (baseCurrency) => set(() => ({ baseCurrency })),
   setTargetCurrency: (targetCurrency) => set(() => ({ targetCurrency })),
-  // isScreenLg: useMediaQuery("(min-width: 1024px)"),
 }));

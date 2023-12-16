@@ -1,12 +1,12 @@
 "use client";
 
-import { usePersonStore } from "@/state/store";
+import { useStore } from "@/state/store";
 import button from "@/components/Button";
 import Link from "next/link";
 
 export default function TrackBtn() {
-  const baseCurrency = usePersonStore((state) => state.baseCurrency);
-  const targetCurrency = usePersonStore((state) => state.targetCurrency);
+  const baseCurrency = useStore((state) => state.baseCurrency);
+  const targetCurrency = useStore((state) => state.targetCurrency);
   const isDisabled = baseCurrency && targetCurrency ? false : true;
 
   return (

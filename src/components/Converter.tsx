@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePersonStore } from "@/state/store";
+import { useStore } from "@/state/store";
 import Icons from "./Icons";
 import Link from "next/link";
 interface ConverterProps {
@@ -15,12 +15,12 @@ export default function Converter(props: ConverterProps) {
   const [amount, setAmount] = useState("");
   const [conversionRate, setConversionRate] = useState(0);
   const [conversionResult, setConversionResult] = useState(0);
-  const baseCurrency = usePersonStore((state) => state.baseCurrency);
-  const targetCurrency = usePersonStore((state) => state.targetCurrency);
+  const baseCurrency = conversionPair[0];
+  const targetCurrency = conversionPair[1];
   const baseCurrencyData = allCurrenciesData[baseCurrency];
   const targetCurrencyData = allCurrenciesData[targetCurrency];
-  usePersonStore.setState({ baseCurrency: conversionPair[0] });
-  usePersonStore.setState({ targetCurrency: conversionPair[1] });
+  useStore.setState({ baseCurrency: conversionPair[0] });
+  useStore.setState({ targetCurrency: conversionPair[1] });
 
   useEffect(() => {
     setConversionRate(pairConversionRateData.data[targetCurrency]);

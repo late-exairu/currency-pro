@@ -1,6 +1,6 @@
 "use client";
 
-import { usePersonStore } from "@/state/store";
+import { useStore } from "@/state/store";
 
 interface CurrencyCardProps {
   code: string;
@@ -12,8 +12,8 @@ interface CurrencyCardProps {
 
 export default function CurrencyCard(props: CurrencyCardProps) {
   const { code, name, symbol, isBaseCurrency, handleCurrencySelect } = props;
-  const baseCurrency = usePersonStore((state) => state.baseCurrency);
-  const targetCurrency = usePersonStore((state) => state.targetCurrency);
+  const baseCurrency = useStore((state) => state.baseCurrency);
+  const targetCurrency = useStore((state) => state.targetCurrency);
   const isBaseSelected = code === baseCurrency;
   const isTargetSelected = code === targetCurrency;
 
