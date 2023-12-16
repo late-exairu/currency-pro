@@ -6,6 +6,7 @@ import { DM_Sans } from "next/font/google";
 import { useStore } from "@/state/store";
 import data from "@/data/data.json";
 import UserBar from "@/components/UserBar";
+import ThemeSwitch from "./ThemeSwitch";
 
 interface menuItem {
   id: number;
@@ -31,8 +32,9 @@ export default function MobileMenu() {
           : "translate-x-full"
       } fixed inset-y-0 right-0 z-20 w-screen bg-white p-10 pt-20 transition-transform duration-300 dark:bg-slate-800/80 md:w-[400px]`}
     >
+      <ThemeSwitch className="mx-auto flex" />
       <ul
-        className={`${dmSans.className} flex-column gap-2.5 text-lg font-medium md:gap-5 lg:flex lg:gap-9`}
+        className={`${dmSans.className} text-md flex-column gap-2.5 text-center font-medium md:gap-5 md:text-lg lg:flex lg:gap-9`}
       >
         {menuData.map((item: menuItem) => (
           <li key={item.id}>
