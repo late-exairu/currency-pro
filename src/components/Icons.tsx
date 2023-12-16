@@ -97,7 +97,7 @@ const Moon = (props: IconProps) => {
     </svg>
   );
 };
-const Switch = (props: IconProps) => {
+const Swap = (props: IconProps) => {
   const { className, title } = props;
 
   return (
@@ -142,7 +142,7 @@ const iconsSet: IconsSet = {
   x: X,
   sun: Sun,
   moon: Moon,
-  switch: Switch,
+  swap: Swap,
 };
 
 export default function Icons(props: IconsProps) {

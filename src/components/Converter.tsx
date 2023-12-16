@@ -15,14 +15,12 @@ export default function Converter(props: ConverterProps) {
   const [amount, setAmount] = useState("");
   const [conversionRate, setConversionRate] = useState(0);
   const [conversionResult, setConversionResult] = useState(0);
-
-  usePersonStore.setState({ baseCurrency: conversionPair[0] });
-  usePersonStore.setState({ targetCurrency: conversionPair[1] });
-
   const baseCurrency = usePersonStore((state) => state.baseCurrency);
   const targetCurrency = usePersonStore((state) => state.targetCurrency);
   const baseCurrencyData = allCurrenciesData[baseCurrency];
   const targetCurrencyData = allCurrenciesData[targetCurrency];
+  usePersonStore.setState({ baseCurrency: conversionPair[0] });
+  usePersonStore.setState({ targetCurrency: conversionPair[1] });
 
   useEffect(() => {
     setConversionRate(pairConversionRateData.data[targetCurrency]);
@@ -50,7 +48,7 @@ export default function Converter(props: ConverterProps) {
       return;
     }
 
-    if (input[input.length - 1] === ".") {
+    if (input.last === ".") {
       if (input.match(/\./g)?.length > 1) {
         return;
       }
@@ -116,7 +114,7 @@ export default function Converter(props: ConverterProps) {
             className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-light shadow-md transition-shadow hover:shadow-[0_2px_2px_rgb(0,0,0,0.1)] md:h-16 md:w-16"
           >
             <Icons
-              icon="switch"
+              icon="swap"
               className="h-5 w-5 fill-text-heavy md:h-6 md:w-6"
             />
           </Link>
