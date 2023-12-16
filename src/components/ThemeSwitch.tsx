@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Icons from "@/components/Icons";
 
-export default function ThemeSwitch(props: { className: string }) {
+export default function ThemeSwitch(props: { className?: string }) {
   const { className } = props;
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
