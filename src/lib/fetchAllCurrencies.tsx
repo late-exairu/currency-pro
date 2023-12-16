@@ -11,7 +11,7 @@ export default async function fetchAllCurrencies() {
   }
 
   let data = (await response.json()).data;
-  delete data["RUB"];
+  delete data["RUB"]; // 🇺🇦
 
   return data;
 }

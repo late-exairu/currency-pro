@@ -38,8 +38,16 @@ export default function Currencies(props: CurrenciesProps) {
 
   const handleCurrencySelect = (code: string) => {
     if (isBaseCurrency) {
+      if (code === baseCurrency) {
+        useStore.setState({ baseCurrency: "" });
+        return;
+      }
       useStore.setState({ baseCurrency: code });
     } else {
+      if (code === targetCurrency) {
+        useStore.setState({ targetCurrency: "" });
+        return;
+      }
       useStore.setState({ targetCurrency: code });
     }
   };
