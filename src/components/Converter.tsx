@@ -111,13 +111,14 @@ export default function Converter(props: ConverterProps) {
 
           <Link
             href={`/conversion/${targetCurrency}/${baseCurrency}`}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-light shadow-md transition-shadow hover:shadow-[0_2px_2px_rgb(0,0,0,0.1)] md:h-16 md:w-16"
+            className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-surface-light shadow-md transition-shadow hover:shadow-[0_2px_2px_rgb(0,0,0,0.1)] md:h-16 md:w-16"
           >
             <Icons
               icon="swap"
               className="h-5 w-5 fill-text-heavy md:h-6 md:w-6"
             />
           </Link>
+
           <div className="flex flex-1 justify-start">
             <div className="flex h-10 items-center whitespace-nowrap rounded-full bg-surface-light px-5 text-base shadow-md md:h-16 md:px-8 md:text-xl">
               <span

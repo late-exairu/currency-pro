@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import Overlay from "@/components/Overlay";
 import StateViewer from "@/components/StateViewer";
 import ThemeProvider from "@/providers/ThemeProvider";
+import ToTopButton from "@/components/ToTopButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,6 +41,8 @@ export default function RootLayout({
           {children}
 
           <Footer />
+
+          <ToTopButton />
           {/* <StateViewer /> */}
         </ThemeProvider>
       </body>
