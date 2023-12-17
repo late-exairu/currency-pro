@@ -55,6 +55,12 @@ export default function Currencies(props: CurrenciesProps) {
         return;
       }
       useStore.setState({ targetCurrency: code });
+
+      setTimeout(() => {
+        document
+          .getElementById("result-controls")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 50);
     }
   };
 

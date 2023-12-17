@@ -10,7 +10,11 @@ export default function TrackBtn() {
   const isDisabled = baseCurrency && targetCurrency ? false : true;
 
   return (
-    <div className="mt-5 flex md:mt-6">
+    <div className="relative mt-5 flex md:mt-6">
+      <div
+        className="absolute -top-32 md:-top-36 lg:-top-40"
+        id="result-controls"
+      />
       <Link
         href={`/conversion/${baseCurrency}/${targetCurrency}`}
         aria-disabled={isDisabled}
