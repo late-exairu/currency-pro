@@ -17,7 +17,11 @@ export default function CurrencyPicker(props: {
   }
 
   return (
-    <div className="[&:not(:first-child)]:mt-10 md:[&:not(:first-child)]:mt-20">
+    <div className="relative [&:not(:first-child)]:mt-10 md:[&:not(:first-child)]:mt-20">
+      <div
+        className="absolute -top-10 md:-top-32"
+        id={isBaseCurrency ? "base-currency-picker" : "target-currency-picker"}
+      />
       <div className="mb-5 block flex-wrap items-center justify-between md:mb-8 md:flex">
         <h3 className="text-center text-xl sm:text-2xl md:text-left lg:text-3xl">
           {title}

@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Icons from "@/components/Icons";
@@ -24,8 +25,8 @@ export default function ThemeSwitch(props: { className?: string }) {
 
   return (
     <button
-      className={`${className} ${
-        !isActive && "dark"
+      className={`${className ?? ""} ${
+        !isActive ? "dark" : ""
       } group my-auto h-10 w-10 overflow-hidden`}
       onClick={() => toggleTheme()}
     >
