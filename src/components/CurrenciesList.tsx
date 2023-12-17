@@ -43,9 +43,12 @@ export default function Currencies(props: CurrenciesProps) {
         return;
       }
       useStore.setState({ baseCurrency: code });
-      // document
-      //   .getElementById("target-currency-picker")
-      //   ?.scrollIntoView({ behavior: "smooth" });
+
+      setTimeout(() => {
+        document
+          .getElementById("target-currency-picker")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 50);
     } else {
       if (code === targetCurrency) {
         useStore.setState({ targetCurrency: "" });

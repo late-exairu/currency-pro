@@ -19,7 +19,7 @@ export default function CurrencyPicker(props: {
   return (
     <div className="relative [&:not(:first-child)]:mt-10 md:[&:not(:first-child)]:mt-20">
       <div
-        className="absolute -top-10 md:-top-32"
+        className="absolute -top-20 md:-top-24 lg:-top-32"
         id={isBaseCurrency ? "base-currency-picker" : "target-currency-picker"}
       />
       <div className="mb-5 block flex-wrap items-center justify-between md:mb-8 md:flex">
