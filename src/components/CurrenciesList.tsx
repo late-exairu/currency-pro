@@ -59,7 +59,7 @@ export default function Currencies(props: CurrenciesProps) {
       setTimeout(() => {
         document
           .getElementById("result-controls")
-          ?.scrollIntoView({ behavior: "smooth" });
+          ?.scrollIntoView({ behavior: "smooth", block: "end" });
       }, 50);
     }
   };
