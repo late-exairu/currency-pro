@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useStore } from "@/state/store";
-import Icons from "./Icons";
+import Icons from "@/components/Icons";
 import Link from "next/link";
 interface ConverterProps {
   allCurrenciesData: any; // replace 'any' with the actual type
@@ -37,7 +37,7 @@ export default function Converter(props: ConverterProps) {
   }, [amount, conversionRate]);
 
   const handleAmountChange = (e: any) => {
-    const input = e.target.value;
+    const input = e.currentTarget.value;
     if (
       input === baseCurrencyData.symbol ||
       input === "." ||
@@ -48,7 +48,7 @@ export default function Converter(props: ConverterProps) {
       return;
     }
 
-    if (input.last === ".") {
+    if (input[input.length - 1] === ".") {
       if (input.match(/\./g)?.length > 1) {
         return;
       }
