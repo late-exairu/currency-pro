@@ -11,8 +11,8 @@ export default function Home() {
             <b className="font-semibold text-accent">exchange</b> your{" "}
             <b className="font-semibold text-accent">money</b>
           </h2>
-          <p className="my-3 text-lg text-text sm:my-5 sm:text-xl md:my-6 md:text-2xl">
-            You always get the best exchange rate with Currencypro, whether you
+          <p className="my-3 text-base text-text sm:my-5 sm:text-lg md:my-6 lg:text-2xl">
+            You always get the best exchange rate with CurrencyPro, whether you
             send, spend, or convert money in dozens of currencies. But don’t
             take our word for it.
           </p>
