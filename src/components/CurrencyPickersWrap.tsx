@@ -6,7 +6,7 @@ export default async function CurrencyPickersWrap() {
   const allCurrenciesData = await fetchAllCurrencies();
 
   return (
-    <>
+    <div>
       <CurrencyPicker
         data={allCurrenciesData}
         title="Select your base currency"
@@ -19,6 +19,6 @@ export default async function CurrencyPickersWrap() {
           isBaseCurrency={false}
         />
       </TargetPickerWrap>
-    </>
+    </div>
   );
 }
