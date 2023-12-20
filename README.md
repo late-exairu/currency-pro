@@ -23,9 +23,9 @@ yarn
 
 To run project locally first you need to add env.local file to root folder and following key provided by [freecurrencyapi.com](https://freecurrencyapi.com/)
 
-```js
+```
 // env.local
-EXCHANGE_API_KEY = { YOUR_API_KEY };
+EXCHANGE_API_KEY = YOUR_API_KEY
 ```
 
 Run dev server
